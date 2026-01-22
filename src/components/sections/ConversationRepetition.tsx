@@ -2,8 +2,18 @@ import { motion } from "framer-motion";
 
 const ConversationRepetition = () => {
   return (
-    <section className="section-spacing pt-8 pb-8 md:pt-12 md:pb-12 lg:pt-16 lg:pb-16 bg-background">
-      <div className="container-document">
+    <section className="section-spacing pt-8 pb-8 md:pt-12 md:pb-12 lg:pt-16 lg:pb-16 bg-background relative overflow-hidden">
+      {/* Background pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url("/background-bege.jpg")',
+          backgroundSize: '300px',
+          backgroundRepeat: 'repeat',
+          opacity: '0.15',
+        }}
+      />
+      <div className="container-document relative z-10">
         <div className="space-y-8 md:space-y-12 lg:space-y-16">
           {/* Top section with image */}
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">

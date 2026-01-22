@@ -30,8 +30,18 @@ const truths = [
 
 const UncomfortableTruth = () => {
   return (
-    <section className="bg-background">
-      <div className="container-document pt-0 pb-12 md:py-12">
+    <section className="bg-background relative overflow-hidden">
+      {/* Background pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url("/background-cinza-escuro.jpg")',
+          backgroundSize: '300px',
+          backgroundRepeat: 'repeat',
+          opacity: '0.1',
+        }}
+      />
+      <div className="container-document pt-0 pb-12 md:py-12 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

@@ -29,8 +29,19 @@ const wontWorkItems = [
 
 const WhatWontWork = () => {
   return (
-    <section className="bg-muted/30">
-      <div className="container-document py-12">
+    <section className="relative py-12 md:py-16" style={{ backgroundColor: '#1a1a1a' }}>
+      {/* Dark pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url("/pattern-elementos-escuro.jpg")',
+          backgroundSize: '300px',
+          backgroundRepeat: 'repeat',
+          opacity: '0.15',
+        }}
+      />
+
+      <div className="container-document relative z-10 py-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -38,10 +49,10 @@ const WhatWontWork = () => {
           transition={{ duration: 0.8 }}
         >
           <div className="mb-8">
-            <h2 className="text-3xl md:text-4xl font-serif text-foreground text-balance mb-4">
+            <h2 className="text-3xl md:text-4xl font-serif text-balance mb-4" style={{ color: '#FFF3DE' }}>
               O que não vai funcionar em 2026
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-white/80">
               Não funciona mais apostar exclusivamente em:
             </p>
           </div>
@@ -54,18 +65,18 @@ const WhatWontWork = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative border border-dashed border-destructive/40 rounded-lg p-6 bg-card hover:bg-destructive/5 min-h-[180px] transition-colors duration-300 flex flex-col justify-between md:col-span-1 ${item.span === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}
+                className={`relative border border-white/10 rounded-lg p-6 bg-white/5 hover:bg-white/10 min-h-[180px] transition-all duration-300 flex flex-col justify-between md:col-span-1 ${item.span === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}
               >
                 <div className="absolute -top-3 -right-3">
-                  <div className="bg-destructive/10 rounded-full p-1">
-                    <X className="text-destructive" width={20} height={20} strokeWidth={2.5} />
+                  <div className="bg-white/10 rounded-full p-1">
+                    <X className="text-white" width={20} height={20} strokeWidth={2.5} />
                   </div>
                 </div>
                 <div className="relative z-10 space-y-3 pr-8">
-                  <h3 className="text-lg font-bold text-foreground">
+                  <h3 className="text-lg font-bold" style={{ color: '#FFF3DE' }}>
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <p className="text-white/80 text-sm leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -74,10 +85,10 @@ const WhatWontWork = () => {
           </div>
 
           <div className="max-w-2xl ml-auto text-left px-4 mt-12 space-y-3">
-            <p className="text-xl md:text-2xl font-semibold text-foreground leading-relaxed">
+            <p className="text-xl md:text-2xl font-semibold text-white leading-relaxed">
               Nada disso é errado.
             </p>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-white/70 leading-relaxed">
               Mas nada disso sustenta uma carreira sozinho no cenário atual.
             </p>
           </div>

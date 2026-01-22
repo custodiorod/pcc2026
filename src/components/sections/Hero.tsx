@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center pt-20 pb-12 bg-background relative overflow-hidden">
+    <section className="min-h-screen flex items-center pt-8 md:pt-16 lg:pt-20 pb-12 bg-background relative overflow-hidden">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
@@ -20,6 +20,15 @@ const Hero = () => {
             transition={{ duration: 0.8 }}
             className="order-1 lg:order-1 space-y-8 lg:space-y-6"
           >
+            {/* Logo/Signature Image */}
+            <div className="mb-4 md:mb-6">
+              <img
+                src="/assinatura-marca.png"
+                alt="Plastic Competitive Career - Assinatura de Marca"
+                className="h-12 md:h-20 lg:h-24 w-auto object-contain"
+              />
+            </div>
+
             {/* Badge */}
             <div className="flex items-center gap-3">
               <span className="text-xs font-sans tracking-[0.2em] uppercase text-muted-foreground">

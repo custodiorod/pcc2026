@@ -35,15 +35,27 @@ const pillars = [
 
 const PillarsCards = () => {
   return (
-    <section className="bg-muted/30 py-12 md:py-16 lg:py-24">
-      <div className="container-document">
+    <section className="relative py-12 md:py-16 lg:py-24" style={{ backgroundColor: '#1a1a1a' }}>
+      {/* Dark pattern overlay */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          backgroundImage: 'url("/pattern-elementos-escuro.jpg")',
+          backgroundSize: '300px',
+          backgroundRepeat: 'repeat',
+          opacity: '0.15',
+        }}
+      />
+
+      <div className="container-document relative z-10">
         <div className="text-center mb-8 md:mb-12 px-4">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="text-2xl md:text-3xl lg:text-4xl font-serif text-foreground text-balance"
+            className="text-2xl md:text-3xl lg:text-4xl font-serif text-balance"
+            style={{ color: '#FFF3DE' }}
           >
             Os quatro pilares que sustentam uma carreira realmente competitiva
           </motion.h2>
@@ -57,29 +69,29 @@ const PillarsCards = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="rounded-lg border bg-card text-card-foreground shadow-sm group hover:shadow-lg transition-shadow duration-300"
+              className="rounded-lg border border-white/10 bg-white/5 text-white shadow-sm group hover:shadow-lg hover:bg-white/10 transition-all duration-300"
             >
               <div className="flex flex-col space-y-1.5 p-6 pb-2 md:pb-3">
                 <div aria-hidden="true" className="relative mx-auto size-28 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]">
                   <div className="absolute inset-0 [--border:currentColor] bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:24px_24px] opacity-10"></div>
-                  <div className="bg-background absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l rounded-lg shadow-sm">
-                    <pillar.icon className="size-5 md:size-6 text-primary" aria-hidden="true" />
+                  <div className="bg-white/10 absolute inset-0 m-auto flex size-12 items-center justify-center border-t border-l border-white/20 rounded-lg shadow-sm">
+                    <pillar.icon className="size-5 md:size-6 text-white" aria-hidden="true" />
                   </div>
                 </div>
-                <h3 className="mt-4 md:mt-6 font-semibold text-lg md:text-xl font-serif">
+                <h3 className="mt-4 md:mt-6 font-semibold text-lg md:text-xl font-serif" style={{ color: '#FFF3DE' }}>
                   {pillar.number}. {pillar.title}
                 </h3>
               </div>
               <div className="p-6 pt-0">
                 {pillar.extraInsight && (
-                  <p className="text-[10px] md:text-xs text-foreground/80 italic mb-2 md:mb-3">
+                  <p className="text-[10px] md:text-xs text-white/70 italic mb-2 md:mb-3">
                     {pillar.extraInsight}
                   </p>
                 )}
-                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                <p className="text-xs md:text-sm text-white/80 leading-relaxed">
                   {pillar.description}
                 </p>
-                <p className="text-[10px] md:text-xs text-foreground/80 italic mt-3 md:mt-4">
+                <p className="text-[10px] md:text-xs text-white/70 italic mt-3 md:mt-4">
                   {pillar.insight}
                 </p>
               </div>

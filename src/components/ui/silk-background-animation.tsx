@@ -1,10 +1,16 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export const SilkBackgroundAnimation = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 300);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -63,12 +69,12 @@ export const SilkBackgroundAnimation = () => {
           const rnd = noise(x, y);
           const intensity = Math.max(0, pattern - rnd / 15.0 * noiseIntensity);
 
-          // Muted warm gray tones to match bg-muted/30
-          // RGB values in the 200-220 range for subtle effect
-          const r = Math.floor(210 * intensity);
-          const g = Math.floor(205 * intensity);
-          const b = Math.floor(200 * intensity);
-          const a = Math.floor(30 * intensity); // Low alpha for subtlety
+          // Darker tones with strong shadow effect
+          // Deep gray for more defined shadow effect
+          const r = Math.floor(100 * intensity);
+          const g = Math.floor(95 * intensity);
+          const b = Math.floor(90 * intensity);
+          const a = Math.floor(150 * intensity); // Higher alpha for depth
 
           const index = (y * width + x) * 4;
           if (index + 3 < data.length) {
@@ -100,7 +106,7 @@ export const SilkBackgroundAnimation = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ opacity: 0.6 }}
+      style={{ opacity: isLoaded ? 0.8 : 0, transition: 'opacity 1s ease-in-out' }}
     />
   );
 };

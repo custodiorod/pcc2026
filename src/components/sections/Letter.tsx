@@ -4,8 +4,18 @@ import { MarketFeatures } from "@/components/ui/market-features";
 const Letter = () => {
   return (
     <>
-      <section className="section-spacing bg-muted/30">
-        <div className="container-document">
+      <section className="section-spacing bg-muted/30 relative overflow-hidden">
+        {/* Background pattern overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: 'url("/background-cinza-claro.jpg")',
+            backgroundSize: '300px',
+            backgroundRepeat: 'repeat',
+            opacity: '0.1',
+          }}
+        />
+        <div className="container-document relative z-10">
           <div className="content-column">
             <motion.article
               initial={{ opacity: 0, y: 30 }}

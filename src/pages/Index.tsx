@@ -1,3 +1,4 @@
+import { TopBanner } from "@/components/ui/top-banner";
 import Hero from "@/components/sections/Hero";
 import Letter from "@/components/sections/Letter";
 import PillarsCards from "@/components/sections/PillarsCards";
@@ -24,6 +25,7 @@ import Footer from "@/components/sections/Footer";
 const Index = () => {
   return (
     <main>
+      <TopBanner />
       <Hero />
       <Letter />
       <PillarsCards />
