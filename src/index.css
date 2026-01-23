@@ -1,8 +1,35 @@
+/* Helvetica Neue LT Pro 45 Light */
+@font-face {
+  font-family: 'Helvetica Neue LT Pro';
+  src: url('/fonts/HelveticaNeueLTPro-45Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Helvetica Neue LT Pro 55 Roman */
+@font-face {
+  font-family: 'Helvetica Neue LT Pro';
+  src: url('/fonts/HelveticaNeueLTPro-55Roman.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Gyst Italic */
+@font-face {
+  font-family: 'Gyst';
+  src: url('/fonts/Gyst-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 
+/*
   PCC 2026 Design System
   Aesthetic: Editorial, sophisticated, document-like
   Inspired by: Strategic documents, medical journals, manifestos
@@ -48,8 +75,8 @@
     --radius: 0.25rem;
 
     /* Typography */
-    --font-serif: 'Playfair Display', Georgia, serif;
-    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-serif: 'Gyst', 'Helvetica Neue LT Pro', serif;
+    --font-sans: 'Helvetica Neue LT Pro', sans-serif;
 
     /* Spacing rhythm */
     --section-spacing: clamp(80px, 10vw, 120px);
@@ -100,14 +127,15 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-family: var(--font-sans);
-    font-weight: 400;
+    font-weight: 300;
     line-height: 1.7;
     letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
-    font-weight: 500;
+    font-weight: 400;
+    font-style: italic;
     line-height: 1.2;
     letter-spacing: -0.02em;
   }

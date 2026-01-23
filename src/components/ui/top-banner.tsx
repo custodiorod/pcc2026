@@ -32,19 +32,19 @@ export const TopBanner = () => {
               key={i}
               className="flex items-center gap-8 px-4"
             >
-              <span className="text-sm md:text-base font-medium tracking-widest uppercase">
+              <span className="text-sm md:text-base font-gyst italic tracking-widest uppercase">
                 Inscrições Abertas 2026
               </span>
               <span className="text-primary-foreground/60">✦</span>
-              <span className="text-sm md:text-base font-medium tracking-widest uppercase">
+              <span className="text-sm md:text-base font-gyst italic tracking-widest uppercase">
                 Plastic Competitive Career
               </span>
               <span className="text-primary-foreground/60">✦</span>
-              <span className="text-sm md:text-base font-medium tracking-widest uppercase">
+              <span className="text-sm md:text-base font-gyst italic tracking-widest uppercase">
                 Inscrições Abertas 2026
               </span>
               <span className="text-primary-foreground/60">✦</span>
-              <span className="text-sm md:text-base font-medium tracking-widest uppercase">
+              <span className="text-sm md:text-base font-gyst italic tracking-widest uppercase">
                 Processo Seletivo
               </span>
               <span className="text-primary-foreground/60">✦</span>

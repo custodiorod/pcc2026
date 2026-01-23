@@ -25,19 +25,8 @@ const Hero = () => {
               <img
                 src="/assinatura-marca.png"
                 alt="Plastic Competitive Career - Assinatura de Marca"
-                className="h-12 md:h-20 lg:h-24 w-auto object-contain"
+                className="h-10 md:h-16 lg:h-20 w-auto object-contain"
               />
-            </div>
-
-            {/* Badge */}
-            <div className="flex items-center gap-3">
-              <span className="text-xs font-sans tracking-[0.2em] uppercase text-muted-foreground">
-                Plastic Competitive Career
-              </span>
-              <span className="w-8 h-px bg-border" />
-              <span className="text-xs font-sans tracking-[0.2em] uppercase text-muted-foreground">
-                2026
-              </span>
             </div>
 
             {/* Headline */}
@@ -78,8 +67,8 @@ const Hero = () => {
           >
             <div className="w-full rounded-lg shadow-2xl">
               <iframe
-                src="https://player.scaleup.com.br/embed/955da9df69ec528f1b4def3648e20dd6345be9bf"
-                title="vsl Dr Max"
+                src="https://player.scaleup.com.br/embed/ae11b7147403a4a90fdd1613a84d8189b197579b"
+                title="VSL carreer"
                 loading="lazy"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen

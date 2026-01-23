@@ -4,28 +4,28 @@ import { useEffect, useRef, useState } from "react";
 const spheres = [
   {
     number: "01",
-    icon: "/elemento1-claro.png",
+    icon: "/elemento1-escuro.png",
     title: "Técnica de Vanguarda",
     description: "Atualização contínua, pensamento crítico e excelência real — não vitrine.",
     insight: "A técnica que diferencia é a que vem acompanhada de evolução constante, não de exposição vazia.",
   },
   {
     number: "02",
-    icon: "/elemento1-escuro.png",
+    icon: "/elemento1-claro.png",
     title: "Autoridade Baseada em Reputação",
     description: "Posicionamento sólido, científico e coerente, construído no tempo.",
     insight: "Reputação não se constrói com marketing. Se constrói com consistência, coerência e profundidade.",
   },
   {
     number: "03",
-    icon: "/elemento1-bege.png",
+    icon: "/elemento1-branco.png",
     title: "Experiência da Paciente",
     description: "Humanização verdadeira, jornada clara, segurança percebida e confiança.",
     insight: "A paciente não escolhe só pelo resultado. Escolhe pela segurança que sente em cada ponto de contato.",
   },
   {
     number: "04",
-    icon: "/elemento1-branco.png",
+    icon: "/elemento1-bege.png",
     title: "Gestão da Clínica",
     description: "Estrutura enxuta, clareza financeira, previsibilidade e liberdade de decisão.",
     insight: "Clínica que não gestiona, sangra. E cirurgião que não entende de gestão, refém da própria estrutura fica.",
